@@ -244,4 +244,8 @@ footer {
     border-color: 0.2s,
   color: 0.2s;
   border: 2px solid black;
+  font-family: Raleway, sans-serif;
+  font-color: rgba(186,142,35);
+  text-decoration: none;
 }
+
