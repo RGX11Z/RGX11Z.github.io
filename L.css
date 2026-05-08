@@ -250,7 +250,5 @@ footer {
 }
 a{
 text-decoration: none;
-}
-a:after{
-color: #000;
+  color: black;
 }
