@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Introduction — Hello, I'm Alex</title>
+<meta name="description" content="A simple, tidy introduction page." />
+<style>
+  :root{
+    --bg:#f3efe7;
+    --surface:#fbf8f2;
+    --ink:#2b2a26;
+    --muted:#6b6862;
+    --accent:#3a6a5b;
+    --accent-soft:#cfe0d6;
+    --shadow: 0 10px 30px rgba(40,40,40,.08);
+    --radius-lg: 28px;
+    --radius-sm: 18px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family: Georgia, "Iowan Old Style", "Source Serif Pro", serif;
+    background: radial-gradient(1200px 600px at 10% -10%, #e8e2d3 0%, transparent 60%),
+                radial-gradient(900px 500px at 110% 10%, #d9e6df 0%, transparent 55%),
+                var(--bg);
+    color:var(--ink);
+    line-height:1.6;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+  .wrap{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 56px 24px 24px;
+    flex:1;
+  }
+  header.hero{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:24px;
+    margin-bottom: 36px;
+    flex-wrap:wrap;
+  }
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.22em;
+    font-size:12px;
+    color:var(--accent);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    margin-bottom:10px;
+  }
+  h1{
+    font-size: clamp(34px, 5vw, 56px);
+    line-height:1.05;
+    margin:0;
+    letter-spacing:-.02em;
+  }
+  h1 em{
+    font-style:italic;
+    color:var(--accent);
+  }
+  .lede{
+    max-width: 420px;
+    color:var(--muted);
+    font-size:17px;
+  }
+
+  /* Grid */
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+  .card{
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    padding: 30px 32px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(0,0,0,.04);
+  }
+  .card h2{
+    font-size:22px;
+    margin:0 0 10px;
+    letter-spacing:-.01em;
+  }
+  .card p{
+    margin:0;
+    color:var(--muted);
+    font-size:15.5px;
+  }
+  .card .icon{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:42px;height:42px;
+    border-radius:12px;
+    background:var(--accent-soft);
+    color:var(--accent);
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-weight:700;
+    margin-bottom:16px;
+  }
+
+  /* Thin rectangles */
+  .strip-row{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 22px;
+  }
+  .strip{
+    background: var(--surface);
+    border-radius: var(--radius-sm);
+    padding: 14px 22px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(0,0,0,.04);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:14px;
+  }
+  .strip b{ color:var(--ink); font-weight:600 }
+  .strip span{ color:var(--muted) }
+  .dot{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--accent);display:inline-block;margin-right:10px;
+    vertical-align:middle;
+  }
+
+  footer{
+    text-align:center;
+    padding: 28px 24px 36px;
+    color:var(--muted);
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:13px;
+    letter-spacing:.05em;
+  }
+  footer .line{
+    width:60px;height:1px;background:rgba(0,0,0,.15);
+    margin:0 auto 16px;
+  }
+
+  @media (max-width: 720px){
+    .grid, .strip-row{ grid-template-columns: 1fr; }
+    .wrap{ padding-top: 36px; }
+    .card{ padding: 24px; }
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div>
+        <div class="eyebrow">Introduction</div>
+        <h1>Hello, I'm <em>Alex</em>.<br/>Designer &amp; quiet maker.</h1>
+      </div>
+      <p class="lede">
+        A small corner of the web to share what I do, what I love,
+        and how to find me. Brewed with care — no scripts required.
+      </p>
+    </header>
+
+    <section class="grid" aria-label="About">
+      <article class="card">
+        <div class="icon">01</div>
+        <h2>About Me</h2>
+        <p>I'm a product designer who likes calm interfaces, generous spacing, and the kind of details you only notice the second time around.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">02</div>
+        <h2>What I Do</h2>
+        <p>Brand identity, web design, and the occasional editorial layout. Lately I've been drawn to slow, considered work over fast trends.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">03</div>
+        <h2>Interests</h2>
+        <p>Typography, ceramics, long walks at golden hour, and brewing coffee that's slightly better than yesterday's attempt.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">04</div>
+        <h2>Currently</h2>
+        <p>Reading <i>The Shape of a Pocket</i>, sketching a new portfolio, and learning to bake a sourdough that doesn't fight back.</p>
+      </article>
+    </section>
+
+    <section class="strip-row" aria-label="Quick facts">
+      <div class="strip">
+        <span><span class="dot"></span><b>Based in</b></span>
+        <span>Lisbon, Portugal</span>
+      </div>
+      <div class="strip">
+        <span><span class="dot"></span><b>Get in touch</b></span>
+        <span>hello@alex.studio</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="line"></div>
+    Made by Alex Morgan — May 2026
+  </footer>
+</body>
+</html>
