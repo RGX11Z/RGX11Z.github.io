@@ -118,7 +118,7 @@ p {
 }
 .g2 { grid-template-columns: 1fr 1fr; }
 .g3 { grid-template-columns: 1fr 1fr 1fr; }
-.g4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+.g4 { grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
 a.card {
   text-decoration: none;
   color: inherit;
